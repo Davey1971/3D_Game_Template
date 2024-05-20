@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://bvp1jabf2g5xh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ctsnt"]
+size = Vector3(30, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ehaq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w3663"]
+size = Vector3(30, 1, 20)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_m33l3"]
+height = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sljdp"]
+albedo_color = Color(0.267817, 0.123859, 0.0803733, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xnnxo"]
+height = 5.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_6wqjw"]
+radius = 2.0
+height = 4.0
+radial_segments = 8
+rings = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxq6l"]
+albedo_color = Color(0.0666667, 0.792157, 0.188235, 1)
+
+[node name="Level 1" type="Node3D"]
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_ctsnt")
+surface_material_override/0 = SubResource("StandardMaterial3D_6ehaq")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_w3663")
+
+[node name="Tree" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.80834, 0)
+
+[node name="Trunk" type="StaticBody3D" parent="Tree"]
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Tree/Trunk"]
+mesh = SubResource("CylinderMesh_m33l3")
+surface_material_override/0 = SubResource("StandardMaterial3D_sljdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree/Trunk"]
+shape = SubResource("CylinderShape3D_xnnxo")
+
+[node name="Leaves" type="MeshInstance3D" parent="Tree"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47976, 0)
+mesh = SubResource("SphereMesh_6wqjw")
+surface_material_override/0 = SubResource("StandardMaterial3D_pxq6l")
+metadata/_edit_lock_ = true

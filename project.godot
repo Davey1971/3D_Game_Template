@@ -26,9 +26,13 @@ window/size/resizable=false
 window/dpi/allow_hidpi=false
 window/size/fullscreen=true
 
+[dotnet]
+
+project/assembly_name="3D_Game_Template"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_mesher/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui]
 

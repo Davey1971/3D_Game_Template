@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cur5g44hr682u"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_3oys3"]
-[ext_resource type="Texture2D" uid="uid://8bcvbjh8rj0c" path="res://UI/splash.png" id="1_7o5in"]
+[ext_resource type="Texture2D" uid="uid://b212aotgj8r84" path="res://UI/splash.png" id="1_7o5in"]
 
 [node name="Splash Menu" type="Control"]
 layout_mode = 3
